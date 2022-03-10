@@ -83,9 +83,6 @@ public class MowerServiceImpl implements MowerService {
         if(!cardinalOrder.contains(cardinalPosition))
             throw new MowerRequestException("Movement", "Error getting mower location", "Cardinal points must be N, S, E, W", HttpStatus.BAD_REQUEST);
 
-        if(xCoordinate < 0 | yCoordinate < 0 )
-            throw new MowerRequestException("Movement", "Error getting mower location", "Mower is out of plateau", HttpStatus.BAD_REQUEST);
-
     }
 
 }
